@@ -1,0 +1,75 @@
+CREATE DATABASE dochub
+
+CREATE TABLE Patients (
+    patient_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    patient_name VARCHAR(225) NOT NULL,
+    patient_email VARCHAR(225) NOT NULL,
+    patient_address TEXT NOT NULL, 
+    patient_contact VARCHAR(13) NOT NULL,
+    patient_country VARCHAR(50),
+    patient_state VARCHAR(50),
+    patient_password VARCHAR(225) NOT NULL,
+    patient_image TEXT
+);
+
+CREATE Table Doctors (
+    doctor_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    doctor_name VARCHAR(225) NOT NULL,
+    doctor_email VARCHAR(225) NOT NULL,
+    doctor_contact VARCHAR(13) NOT NULL,
+    doctor_experience INT NOT NULL,
+    doctor_address TEXT,
+    doctor_country VARCHAR(50),
+    doctor_state VARCHAR(50),
+    doctor_password VARCHAR(225) NOT NULL,
+    doctor_department VARCHAR(225) NOT NULL,
+    doctor_image TEXT
+
+);
+
+CREATE Table Feedbacks (
+    feedback_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    patient_id INT NOT NULL,
+    doctor_id INT NOT NULL,
+    comment VARCHAR(225),
+    rating INT NOT NULL,
+    FOREIGN KEY(patient_id) REFERENCES Patients(patient_id) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY(doctor_id) REFERENCES Doctors(doctor_id) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE Table Appointments (
+    appointment_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    patient_id INT NOT NULL,
+    doctor_id INT NOT NULL,
+    date DATE NOT NULL,
+    mode VARCHAR(50) NOT NULL,
+    FOREIGN KEY(patient_id) REFERENCES Patients(patient_id) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY(doctor_id) REFERENCES Doctors(doctor_id) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE Table Medications (
+    medication_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    patient_id INT NOT NULL,
+    doctor_id INT NOT NULL,
+    file VARCHAR(225) NOT NULL,
+    date date NOT NULL,
+    FOREIGN KEY(patient_id) REFERENCES Patients(patient_id) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY(doctor_id) REFERENCES Doctors(doctor_id) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+
+
+INSERT INTO `doctors`(`doctor_id`, `doctor_name`, `doctor_email`, `doctor_contact`, `doctor_experience`, `doctor_address`, `doctor_password`, `doctor_department`) VALUES 
+("","Dr. Adam Johnson","adamjohnson@yahoo.com","0197104758","5","Lagos, Nigeria","asd","Neurology"),
+("","Dr. Saraswati Olusegun","adamjohnson@yahoo.com","+1 202-918-2132","15","Lagos, Nigeria","asd","Cardiology"),
+("","Dr. Tahira Mohamad","adamjohnson@yahoo.com","+1 209-279-2326","5","Lagos, Nigeria","asd","Cardiology"),
+("","Dr. Adam Johnson","adamjohnson@yahoo.com","+1 385-967-9416","8","Lagos, Nigeria","asd","Neurology"),
+("","Dr. Lebohang Rachida","adamjohnson@yahoo.com","0197104758","5","Lagos, Nigeria","asd","Dermatology"),
+("","Dr. Prakash Barakat","prakashbarakat@gamil.com","+1 412-313-4656","12","Lagos, Nigeria","asd","Dermatology"),
+("","Dr. Aravinda Alhassan","aravindaalhassan@yahoo.com","+234 702 421 6806","5","Lagos, Nigeria","asd","Dermatology"),
+("","Dr. Aparna Ziya ad-Din","aparnaziyaaddin@yahoo.com","+234 819 053 7971","2","Lagos, Nigeria","asd","Neurology"),
+("","Dr. Anila Shila","anilashila@yahoo.com","+234 702 773 5000","5","Lagos, Nigeria","asd","General Surgery"),
+("","Dr. Shikha Usman","shikhausman@gmail.com","+234 703 828 8434","5","Wisconsin, USA","asd","Neurology"),
+("","Dr. Mawuli Esi","mawuliesi@yahoo.com","+234 702 512 2899","5","Enugu, Nigeria","asd","Neurology"),
+("","Dr. Ismaeel Mikha'il","ismaeelmikhail@yahoo.com","+234 702 258 2536","5","Imo, Nigeria","asd","General Surgery"),
+("","Dr. Oluwaseyi Ila","oluwaseyiila@gmail.com","+234 819 046 1306","5","North Carolina, USA","asd","Pediatrics")

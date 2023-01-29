@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "330848855288",
+    "project_id": "dochub-6169b",
+    "storage_bucket": "dochub-6169b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330848855288:android:cecc8ce72b614f7199470d",
+        "android_client_info": {
+          "package_name": "com.example.dochub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330848855288-97nd15md35sfqs4sn3njfodg0ndliu1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr9Jg0y8u_RtCT2ivzhbXpsXIU7o_hmAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330848855288-97nd15md35sfqs4sn3njfodg0ndliu1o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "330848855288-hhikcpqqtik4ou9plard6s9pmi2merc0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.doctohub"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330848855288:android:07d70a2481592d3b99470d",
+        "android_client_info": {
+          "package_name": "com.flutter.doctohub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330848855288-97nd15md35sfqs4sn3njfodg0ndliu1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr9Jg0y8u_RtCT2ivzhbXpsXIU7o_hmAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330848855288-97nd15md35sfqs4sn3njfodg0ndliu1o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "330848855288-hhikcpqqtik4ou9plard6s9pmi2merc0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.doctohub"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
